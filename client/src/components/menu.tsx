@@ -120,7 +120,7 @@ export default class Menu extends Base<MenuProps, MenuStates> {
                             <MenuItem title='Bindings' path='rolebinding' resource='Role' additionalPaths={['clusterrolebinding']} onClick={onClick} />
                         )}
 
-                        {canView(rules, api.secret) && (
+                        {canView(false, api.secret) && (
                             <MenuItem title='Secrets' path='secret' resource='Secret' onClick={onClick} />
                         )}
                     </Group>
